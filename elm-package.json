@@ -1,0 +1,16 @@
+{
+    "version": "0.1.0",
+    "summary": "Convenience functions for working with Cmd",
+    "repository": "https://github.com/shmookey/cmd-extra.git",
+    "license": "MIT",
+    "source-directories": [
+        "src"
+    ],
+    "exposed-modules": [
+        "Cmd.Extra"
+    ],
+    "dependencies": {
+        "elm-lang/core": "4.0.0 <= v < 5.0.0"
+    },
+    "elm-version": "0.17.0 <= v < 0.18.0"
+}
