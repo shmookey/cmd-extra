@@ -1,9 +1,9 @@
-module Cmd.Extra exposing (return)
+module Cmd.Extra exposing (message)
 
 {-| Convenience functions for working with Cmd
 
 # Basics
-@docs return
+@docs message
 -}
 
 import Task
@@ -14,7 +14,7 @@ This is useful for implementing components that generate events in the manner
 of HTML elements, but where the event fires from within Elm code, rather than
 by an external trigger.
 -}
-return : msg -> Cmd msg
-return x = 
-  Task.succeed () |> Task.perform (always x) (always x)
+message : msg -> Cmd msg
+message x =
+  Task.perform identity identity (Task.succeed x) 
 
