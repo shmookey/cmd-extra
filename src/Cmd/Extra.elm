@@ -8,6 +8,7 @@ module Cmd.Extra exposing (message)
 
 import Task
 
+
 {-| A command to generate a message without performing any action.
 
 This is useful for implementing components that generate events in the manner
@@ -16,5 +17,4 @@ by an external trigger.
 -}
 message : msg -> Cmd msg
 message x =
-  Task.perform identity identity (Task.succeed x) 
-
+    Task.perform identity (Task.succeed x)
